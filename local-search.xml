@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>KugouApi</title>
+    <link href="/2024/05/27/KugouApi/"/>
+    <url>/2024/05/27/KugouApi/</url>
+    
+    <content type="html"><![CDATA[<h1 id="KugouApi整理"><a href="#KugouApi整理" class="headerlink" title="KugouApi整理"></a>KugouApi整理</h1><p><strong>注：仅供学习使用，请勿用于商业用途，否则本人概不负责</strong></p><h2 id="1-搜索Api"><a href="#1-搜索Api" class="headerlink" title="1.搜索Api"></a>1.搜索Api</h2><p><a href="http://mobilecdn.kugou.com/api/v3/search/song?format=json&keyword=%7Bkeyword%7D&page=%7Bpage%7D&pagesize=%7Bpagesize%7Dshowtype=1">http://mobilecdn.kugou.com/api/v3/search/song?format=json&amp;keyword={keyword}&amp;page={page}&amp;pagesize={pagesize}showtype=1</a></p><p>参数keyword为url<br><strong>中文转url</strong>参考python代码：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">: file: encodeToUrl.py</span><br><span class="hljs-string">: author: turporfo</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-keyword">from</span> urllib <span class="hljs-keyword">import</span> parse<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">EncodeToUrl</span>:<br>    <span class="hljs-string">&#x27;&#x27;&#x27;转码&#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, string :<span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-literal">None</span>:<br>        self.string = string<br>        <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">encode</span>(<span class="hljs-params">self, code:<span class="hljs-built_in">str</span>=<span class="hljs-string">&#x27;utf-8&#x27;</span></span>) -&gt; <span class="hljs-built_in">str</span>:<br>        <span class="hljs-string">&#x27;&#x27;&#x27;中文转Url&#x27;&#x27;&#x27;</span><br>        <span class="hljs-keyword">return</span> parse.quote(self.string.encode(code))<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    string = <span class="hljs-string">&#x27;中国&#x27;</span><br>    <span class="hljs-built_in">print</span>(EncodeToUrl(string).encode())<br></code></pre></td></tr></table></figure><h2 id="2-音乐详情获取"><a href="#2-音乐详情获取" class="headerlink" title="2.音乐详情获取"></a>2.音乐详情获取</h2><p><a href="http://m.kugou.com/app/i/getSongInfo.php?cmd=playInfo&hash=%7Bhash%7D">http://m.kugou.com/app/i/getSongInfo.php?cmd=playInfo&amp;hash={hash}</a></p><p>hash为该歌曲的hash值</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>原创</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Author</title>
     <link href="/2024/05/27/Author/"/>
     <url>/2024/05/27/Author/</url>
